@@ -37,6 +37,10 @@ body.darkmode{
     display: flex;
 }
 
+#topcont{
+    display: flex;
+}
+
 #easy{
     font-size: 35px;
     font-weight: 700;
@@ -47,7 +51,10 @@ body.darkmode{
 #butts{
     display: flex;
     align-items: center;
-    margin-left: 1170px;
+    position: absolute;
+    top: 77px;
+    right: 110px;
+    
 }
 
 #buttswitch{
@@ -59,6 +66,7 @@ body.darkmode{
     border-radius: 50px;
     margin-right: 24px;
     cursor: pointer;
+    background-color: #a5a5a5;
 }
 
 #buttdark{
@@ -69,6 +77,7 @@ body.darkmode{
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #a5a5a5;
     cursor: pointer;
 }
 
@@ -104,6 +113,11 @@ body.darkmode{
     cursor: pointer;
 }
 
+#buttact:hover{
+    background-color: #ff8686;
+    border: solid 1px black;
+}
+
 #def{
     display: flex;
     justify-content: center;
@@ -123,6 +137,7 @@ body.darkmode{
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 24px;
+    text-transform: uppercase;
 }
 
 #phone{
@@ -134,6 +149,7 @@ body.darkmode{
 #audio{
     align-self: center;
     margin-right: 100px;
+    cursor: pointer;
 }
 
 #searchdefinition{

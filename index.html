@@ -15,27 +15,33 @@
 
             <div id="inbox">
 
+                <div id="topcont">
+
                 <div id="logonbutts">
 
                     <img src="media/logo1.png" alt="logo du site" width="89" height="100" id="logo">
 
                     <h1 id="easy">EASY DICTIONARY</h1>
 
-                    <div id="butts">
+                    
+
+                </div>
+                
+                <div id="butts">
 
                         <button id="buttswitch">T</button>
 
                         <button id="buttdark"></button>
                 
                     </div>
-
+                
                 </div>
 
                 <div id="searchbar">
 
-                    <input type="text" placeholder="Research in the dictionary" id="research">
+                    <input type="text" placeholder="Research in the dictionary" id="research" oninput="updateResearch(value)">
 
-                    <p id="buttact"><img src="media/loupe.png" alt="" width="25" height="25"></p>
+                    <p id="buttact" onclick="search()"><img src="media/loupe.png" alt="" width="25" height="25"></p>
 
                 </div>
 
@@ -73,12 +79,16 @@
 
                         <h2 id="synonymes">Synonymes :</h2>
 
-                        <ul>
-                            <li>greeting</li>
-                            <li>salute</li>
-                            <li>salutation</li>
-                            <li>welcome</li>
-                        </ul>
+                        <div id="listesyno">
+
+                            <ul>
+                                <li>greeting</li>
+                                <li>salute</li>
+                                <li>salutation</li>
+                                <li>welcome</li>
+                            </ul>
+                    
+                        </div>
 
                     </div>
 
