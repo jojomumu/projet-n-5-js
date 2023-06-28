@@ -10,7 +10,12 @@
 body{
     margin: 0;
     background-size: auto 100%;
-    font-family: 'Inria Sans', sans-serif;;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+body.darkmode{
+    background-color: #7B7B7B;
+    color: #DDDDDD;
 }
 
 #biggestbox{
@@ -53,15 +58,18 @@ body{
     padding-left: 12px;
     border-radius: 50px;
     margin-right: 24px;
+    cursor: pointer;
 }
 
 #buttdark{
     border: solid 2px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
+    padding: 23px;
     border-radius: 50px;
+    background-image: url(media/moon.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 
 #searchbar{
@@ -93,6 +101,7 @@ body{
     border: solid 1px;
     border-radius: 0px 50px 50px 0px;
     background-color: var(--buttcolor);
+    cursor: pointer;
 }
 
 #def{
@@ -170,6 +179,7 @@ span{
 ul{
     font-size: 22px;
 }
+
 
 
 
