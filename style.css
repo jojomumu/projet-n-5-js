@@ -15,7 +15,7 @@ body{
 
 body.darkmode{
     background-color: #7B7B7B;
-    color: #DDDDDD;
+    color: var(--col-textdark);
 }
 
 #biggestbox{
@@ -194,6 +194,13 @@ span{
 
 ul{
     font-size: 22px;
+}
+
+.definition{
+    font-size: 22px;
+    text-align: center;
+    margin-right: 100px;
+    
 }
 
 

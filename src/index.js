@@ -1,7 +1,6 @@
 const fontButton = document.getElementById('buttswitch');
 
 
-
 let toggleDark = document.getElementById('buttdark');
 let body = document.body;
 let logo = document.getElementById('logo');
@@ -54,6 +53,8 @@ function updateResearch(value) {
   document.getElementById("searched").textContent = value;
 };
 
+
+
 function search() {
   let searchInput = document.getElementById("research");
   let word = searchInput.value;
@@ -70,56 +71,99 @@ function search() {
   let phoneticsWord = document.getElementById("phone");
   phoneticsWord.innerHTML = "";
 
-};
+  let audioElement = document.getElementById("audio");
+  audioElement.innerHTML = "";
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.dictionaryapi.dev/api/v2/entries/en/" + word, true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+
+      if (response.length > 0) {
+        let wordData = response[0];
+
+        // Display definitions
+        let meanings = wordData.meanings;
+        for (let i = 0; i < meanings.length; i++) {
+          let definition = meanings[i].definitions[0].definition;
+          let definitionElement = document.createElement("div");
+          definitionElement.className = "definition";
+          definitionElement.textContent = definition;
+          definitionsDiv.appendChild(definitionElement);
+        }
+
+        // Collect and display synonyms
+        let synonyms = [];
+        for (let i = 0; i < meanings.length; i++) {
+          let synonymsData = meanings[i].definitions[0].synonyms;
+          if (synonymsData && synonymsData.length > 0) {
+            synonyms.push(...synonymsData);
+          }
+        }
+        if (synonyms.length > 0) {
+          let synonymsElement = document.createElement("ul");
+          for (let i = 0; i < synonyms.length; i++) {
+            let synonym = document.createElement("li");
+            synonym.textContent = synonyms[i];
+            synonymsElement.appendChild(synonym);
+          }
+          synonymesDiv.appendChild(synonymsElement);
+        }
+
+        // Display examples
+        let examples = wordData.meanings[0].definitions[0].examples;
+        if (examples && examples.length > 0) {
+          for (let i = 0; i < examples.length; i++) {
+            let example = examples[i].text;
+            let exampleElement = document.createElement("p");
+            exampleElement.innerHTML = `"${example}"`;
+            exemplesDiv.appendChild(exampleElement);
+          }
+        }
+
+        // Display phonetics
+        let phonetics = wordData.phonetics;
+        if (phonetics && phonetics.length > 0) {
+          let phoneticsElement = document.createElement("p");
+          phoneticsElement.textContent = phonetics[0].text;
+          phoneticsWord.appendChild(phoneticsElement);
+
+          let audioUrl = phonetics[0].audio;
+          let audioImage = document.createElement("img");
+          audioImage.src = "media/audio.png";
+          audioImage.alt = "Audio";
+          audioImage.width = 25;
+          audioImage.height = 25;
+          audioImage.addEventListener("click", function () {
+            let audio = new Audio(audioUrl);
+            audio.play();
+          });
+          audioElement.appendChild(audioImage);
+        }
+      } else {
+        let noResultsElement = document.createElement("div");
+        noResultsElement.textContent = "No definitions found.";
+        definitionsDiv.appendChild(noResultsElement);
+      }
+    }
+  };
+  xhr.send();
+}
 
 
 
-// var xhr = new XMLHttpRequest();
-// xhr.open("GET", "https://api.dictionaryapi.dev/api/v2/entries/en/" + word, true);
-// xhr.onload = function () {
-//   if (xhr.status === 200) {
-//     var response = JSON.parse(xhr.responseText);
 
-//     if (response.length > 0) {
-//       var meanings = response[0].meanings;
 
-//       for (var i = 0; i < meanings.length; i++) {
-//         var definition = meanings[i].definitions[0].definition;
 
-//         var definitionElement = document.createElement("div");
-//         definitionElement.className = "definition";
-//         definitionElement.textContent = definition;
-//         definitionsDiv.appendChild(definitionElement);
-
-//         var synonyms = meanings[i].definitions[0].synonyms;
-//         if (synonyms && synonyms.length > 0) {
-//           var synonymsElement = document.createElement("div");
-//           synonymsElement.textContent = "Synonyms: " + synonyms.join(", ");
-//           definitionsDiv.appendChild(synonymsElement);
-//         }
-
-//         var examples = meanings[i].definitions[0].examples;
-//         if (examples && examples.length > 0) {
-//           var examplesElement = document.createElement("div");
-//           examplesElement.textContent = "Examples: ";
-//           definitionsDiv.appendChild(examplesElement);
-
-//           var examplesList = document.createElement("ul");
-//           for (var j = 0; j < examples.length; j++) {
-//             var exampleItem = document.createElement("li");
-//             exampleItem.textContent = examples[j];
-//             examplesList.appendChild(exampleItem);
-//           }
-//           definitionsDiv.appendChild(examplesList);
-//         }
-//       }
-//     } else {
-//       var noResultsElement = document.createElement("div");
-//       noResultsElement.textContent = "No definitions found.";
-//       definitionsDiv.appendChild(noResultsElement);
+// else {
+//       console.log("Request failed. Status: " + xhr.status);
 //     }
-//   } else {
-//     console.log("Request failed. Status: " + xhr.status);
-//   }
-// };
-// xhr.send();
+
+// let examplesList = document.createElement("ul");
+//             for (let j = 0; j < examples.length; j++) {
+//               let exampleItem = document.createElement("li");
+//               exampleItem.textContent = examples[j];
+//               examplesList.appendChild(exampleItem);
+//             }
+//             definitionsDiv.appendChild(examplesList);
