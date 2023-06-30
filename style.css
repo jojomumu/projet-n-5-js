@@ -205,6 +205,13 @@ ul{
 
 @media screen and (max-width: 375px) {
 
+    #biggestbox{
+        padding-left: 32px;
+        padding-top: 28px;
+        box-sizing: border-box;
+    }
+
+
     #inbox{
         width: 375px;
     }
@@ -215,7 +222,8 @@ ul{
 
     #research{
         width: 245px;
-        
+        margin-left: 12px;
+        padding-left: 20px;
     }
 
     #descri{
@@ -228,11 +236,44 @@ ul{
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 77px;
-        right: 110px;
+        top: 28px;
+        right: 20px;
         
     }
 
+    #easy{
+        font-size: 25px;
+        width: 135px;
+        margin-top: 0;
+    }
+
+    #logo{
+        width: 70px;
+        height: 78px;
+    }
+
+    #synonymes{
+        font-size: 34px;
+        margin-left: 0px;
+        width: 170px;
+    }
+
+    #buttact{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    ::placeholder{
+       color: var(--searchcol);
+    }
+
+    #exemples{
+        flex-direction: column;
+    }
+
+    #exe{
+        margin-left: 38px;
+    }
 
 }
 
