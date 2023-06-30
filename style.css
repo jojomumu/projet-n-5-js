@@ -203,6 +203,39 @@ ul{
     
 }
 
+@media screen and (max-width: 375px) {
+
+    #inbox{
+        width: 375px;
+    }
+
+    #searchbar{
+        width: 375px;
+    }
+
+    #research{
+        width: 245px;
+        
+    }
+
+    #descri{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #butts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 77px;
+        right: 110px;
+        
+    }
+
+
+}
+
 
 
 

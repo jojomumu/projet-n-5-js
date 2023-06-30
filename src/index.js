@@ -93,7 +93,7 @@ function search() {
           definitionsDiv.appendChild(definitionElement);
         }
 
-        // Collect and display synonyms
+        
         let synonyms = [];
         for (let i = 0; i < meanings.length; i++) {
           let synonymsData = meanings[i].definitions[0].synonyms;
@@ -111,7 +111,7 @@ function search() {
           synonymesDiv.appendChild(synonymsElement);
         }
 
-        // Display examples
+        
         let examples = wordData.meanings[0].definitions[0].examples;
         if (examples && examples.length > 0) {
           for (let i = 0; i < examples.length; i++) {
@@ -122,7 +122,7 @@ function search() {
           }
         }
 
-        // Display phonetics
+        
         let phonetics = wordData.phonetics;
         if (phonetics && phonetics.length > 0) {
           let phoneticsElement = document.createElement("p");
