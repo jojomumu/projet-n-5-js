@@ -20,11 +20,13 @@ toggleDark.addEventListener('click', function() {
     toggleDark.style.backgroundImage = 'url(media/sun.png)';
     toggleDark.style.backgroundColor = 'white';
     fontButton.style.backgroundColor = 'white';
+    document.getElementById("errormessage").style.color = 'black';
   } else {
     logo.src = 'media/logo1.png';
     toggleDark.style.backgroundImage = 'url(media/moon.png)';
     toggleDark.style.backgroundColor = '#a5a5a5';
     fontButton.style.backgroundColor = '#a5a5a5';
+    document.getElementById("errormessage").style.color = 'red';
   }
   
   });
@@ -57,8 +59,18 @@ function updateResearch(value) {
 
 function search() {
   let searchInput = document.getElementById("research");
-  let word = searchInput.value;
-
+  let word = searchInput.value.trim();
+  
+  if (word === "") {
+      
+  document.getElementById("errormessage").textContent = "Please enter a word.";
+  return;
+  }
+  
+    
+  document.getElementById("errormessage").textContent = "";
+  
+    
   let definitionsDiv = document.getElementById("searchdef");
   definitionsDiv.innerHTML = "";
 

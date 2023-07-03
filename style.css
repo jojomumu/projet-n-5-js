@@ -156,6 +156,7 @@ body.darkmode{
     font-size: 22px;
     text-align: center;
     margin-right: 100px;
+    margin-top: 22px;
 }
 
 #descri{
@@ -202,6 +203,17 @@ ul{
     
 }
 
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 150px;
+    margin-top: -10px;
+  }
+
+p{
+    margin-top: 0;
+}
+
 @media screen and (max-width: 375px) {
 
     #biggestbox{
@@ -213,6 +225,7 @@ ul{
 
     #inbox{
         width: 375px;
+        
     }
 
     #searchbar{
@@ -242,12 +255,12 @@ ul{
 
     #searched{
         font-size: 26px;
+
     }
 
     #def{
         margin-top: 57px;
         margin-left: 26px;
-        
     }
 
     #descri{
@@ -314,6 +327,10 @@ ul{
     #buttswitch{
         margin-right: 0;
         margin-bottom: 5px;
+    }
+
+    .error{
+        margin-left: 20px;
     }
 
 }
