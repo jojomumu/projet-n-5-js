@@ -174,12 +174,11 @@ span{
 }
 
 #syno{
-    margin-right: 300px;
+    margin-right: 120px;
 }
 
 #synonymes{
     font-size: 34px;
-    margin-left: -80px;
 }
 
 #exe{
@@ -224,11 +223,37 @@ ul{
         width: 245px;
         margin-left: 12px;
         padding-left: 20px;
+        margin-top: 50px;
+    }
+
+
+
+    #definition{
+        width: 170px;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    #searchdefinition{
+        font-size: 20px;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    #searched{
+        font-size: 26px;
+    }
+
+    #def{
+        margin-top: 57px;
+        margin-left: 26px;
+        
     }
 
     #descri{
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
     }
 
     #butts{
@@ -253,14 +278,15 @@ ul{
     }
 
     #synonymes{
-        font-size: 34px;
-        margin-left: 0px;
+        font-size: 24px;
+        margin-left: 10px;
         width: 170px;
     }
 
     #buttact{
         padding-right: 12px;
         padding-left: 12px;
+        margin-top: 50px;
     }
 
     ::placeholder{
@@ -273,6 +299,21 @@ ul{
 
     #exe{
         margin-left: 38px;
+    }
+
+    #listesyno{
+        margin-left: 90px;
+        font-size: 20px;
+    }
+
+    .definition{
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    #buttswitch{
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 
 }

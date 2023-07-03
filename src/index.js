@@ -65,9 +65,6 @@ function search() {
   let synonymesDiv = document.getElementById("listesyno");
   synonymesDiv.innerHTML = "";
 
-  let exemplesDiv = document.getElementById("exemples");
-  exemplesDiv.innerHTML = "";
-
   let phoneticsWord = document.getElementById("phone");
   phoneticsWord.innerHTML = "";
 
@@ -78,12 +75,12 @@ function search() {
   xhr.open("GET", "https://api.dictionaryapi.dev/api/v2/entries/en/" + word, true);
   xhr.onload = function () {
     if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
+      let response = JSON.parse(xhr.responseText);
 
       if (response.length > 0) {
         let wordData = response[0];
 
-        // Display definitions
+      
         let meanings = wordData.meanings;
         for (let i = 0; i < meanings.length; i++) {
           let definition = meanings[i].definitions[0].definition;
@@ -109,17 +106,12 @@ function search() {
             synonymsElement.appendChild(synonym);
           }
           synonymesDiv.appendChild(synonymsElement);
-        }
 
+          document.getElementById("descri").style.display = "flex";
+        } else {
+          
+          document.getElementById("descri").style.display = "none";
         
-        let examples = wordData.meanings[0].definitions[0].examples;
-        if (examples && examples.length > 0) {
-          for (let i = 0; i < examples.length; i++) {
-            let example = examples[i].text;
-            let exampleElement = document.createElement("p");
-            exampleElement.innerHTML = `"${example}"`;
-            exemplesDiv.appendChild(exampleElement);
-          }
         }
 
         
@@ -149,21 +141,4 @@ function search() {
     }
   };
   xhr.send();
-}
-
-
-
-
-
-
-// else {
-//       console.log("Request failed. Status: " + xhr.status);
-//     }
-
-// let examplesList = document.createElement("ul");
-//             for (let j = 0; j < examples.length; j++) {
-//               let exampleItem = document.createElement("li");
-//               exampleItem.textContent = examples[j];
-//               examplesList.appendChild(exampleItem);
-//             }
-//             definitionsDiv.appendChild(examplesList);
+};
