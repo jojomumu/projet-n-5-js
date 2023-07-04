@@ -1,63 +1,60 @@
-:root{
+:root {
     --primary-color: #fff;
     --col-text: #454242;
     --col-textdark: #DDDDDD;
     --buttcolor: #FF4444;
     --searchcol: #F0F0F0;
     font-size: 100%;
-}
-
-body{
+  }
+  
+  body {
     margin: 0;
     background-size: auto 100%;
     font-family: 'Inria Sans', sans-serif;
-}
-
-body.darkmode{
+  }
+  
+  body.darkmode {
     background-color: #7B7B7B;
     color: var(--col-textdark);
-}
-
-#biggestbox{
+  }
+  
+  #biggestbox {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     padding-left: 113px;
     padding-top: 55px;
     box-sizing: border-box;
-}
-
-#inbox{
-    
+  }
+  
+  #inbox {
     width: 1735px;
-
-}
-
-#logonbutts{
+  }
+  
+  #logonbutts {
     display: flex;
-}
-
-#topcont{
+  }
+  
+  #topcont {
     display: flex;
-}
-
-#easy{
+  }
+  
+  #easy {
     font-size: 35px;
     font-weight: 700;
     padding-top: 12px;
     padding-left: 20px;
-}
-
-#butts{
+  }
+  
+  #butts {
     display: flex;
     align-items: center;
     position: absolute;
     top: 77px;
     right: 110px;
-    
-}
-
-#buttswitch{
+  }
+  
+  #buttswitch {
     border: solid 2px;
     font-size: 36px;
     font-family: 'Inria Serif', serif;
@@ -67,9 +64,9 @@ body.darkmode{
     margin-right: 24px;
     cursor: pointer;
     background-color: #a5a5a5;
-}
-
-#buttdark{
+  }
+  
+  #buttdark {
     border: solid 2px;
     padding: 23px;
     border-radius: 50px;
@@ -79,13 +76,13 @@ body.darkmode{
     background-position: center;
     background-color: #a5a5a5;
     cursor: pointer;
-}
-
-#searchbar{
+  }
+  
+  #searchbar {
     display: flex;
-}
-
-#research{
+  }
+  
+  #research {
     width: 1200px;
     height: 50px;
     background-color: var(--searchcol);
@@ -94,15 +91,16 @@ body.darkmode{
     margin-top: 71px;
     padding-left: 61px;
     border: solid 1px;
-}
-
-::placeholder{
+    font-size: 20px;
+  }
+  
+  ::placeholder {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     opacity: 50%;
-}
-
-#buttact{
+  }
+  
+  #buttact {
     margin-top: 71px;
     padding: 11px;
     padding-right: 50px;
@@ -111,254 +109,231 @@ body.darkmode{
     border-radius: 0px 50px 50px 0px;
     background-color: var(--buttcolor);
     cursor: pointer;
-}
-
-#buttact:hover{
+  }
+  
+  #buttact:hover {
     background-color: #ff8686;
     border: solid 1px black;
-}
-
-#def{
+  }
+  
+  #def {
     display: flex;
     justify-content: center;
     margin-top: 104px;
-}
-
-#definition{
+  }
+  
+  #definition {
     font-size: 32px;
     font-weight: 700;
     margin-right: 24px;
     margin-top: 0;
-}
-
-#searched{
+  }
+  
+  #searched {
     font-size: 34px;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 24px;
     text-transform: uppercase;
-}
-
-#phone{
+  }
+  
+  #phone {
     margin-top: 0;
     text-align: center;
     margin-right: 20px;
-}
-
-#audio{
+  }
+  
+  #audio {
     align-self: center;
     margin-right: 100px;
     cursor: pointer;
-}
-
-#searchdefinition{
+  }
+  
+  #searchdefinition {
     font-size: 22px;
     text-align: center;
     margin-right: 100px;
     margin-top: 22px;
-}
-
-#descri{
+  }
+  
+  #descri {
     display: flex;
     justify-content: center;
     margin-top: 81px;
-}
-
-span{
+  }
+  
+  span {
     font-weight: 700;
     font-style: italic;
-}
-
-#exemples{
-    display: flex;
-}
-
-#syno{
+  }
+  
+  #syno {
     margin-right: 120px;
     padding-left: 15px;
-}
-
-#synonymes{
+  }
+  
+  #synonymes {
     font-size: 34px;
-    
-}
-
-#exe{
-    font-size: 34px;
-    margin-left: 130px;
-}
-
-#firstex, #secex{
-    width: 300px;
+  }
+  
+  ul {
     font-size: 22px;
-}
-
-ul{
-    font-size: 22px;
-}
-
-.definition{
+  }
+  
+  .definition {
     font-size: 22px;
     text-align: center;
     margin-right: 100px;
-    
-}
-
-.error {
+  }
+  
+  .error {
     color: red;
     font-size: 14px;
     margin-left: 150px;
     margin-top: -10px;
   }
-
-p{
+  
+  p {
     margin-top: 0;
-}
-
-@media screen and (max-width: 375px) {
-
-    #biggestbox{
-        padding-left: 0px;
-        padding-top: 0px;
-    }
+  }
+  
+  @media screen and (max-width: 375px) {
 
 
-    #inbox{
-        width: 375px;
-        /* box-sizing: border-box; */
-        padding-left: 32px;
-        padding-top: 28px;
-        
-    }
-
-    #searchbar{
-        width: 375px;
-        
-    }
-
-    #research{
-        width: 245px;
-        margin-left: 12px;
-        padding-left: 20px;
-        margin-top: 50px;
-    }
-
-
-
-    #definition{
-        width: 200px;
-        margin: 0;
-        font-size: 24px;
-    }
-
-    #searchdefinition{
-        font-size: 20px;
-        text-align: left;
-        margin-left: 40px;
-    }
-
-    #searched{
-        font-size: 26px;
-        text-align: center;
-    }
-
-    #def{
-        margin-top: 57px;
-        margin-left: 26px;
-        display: block;
-    }
-
-    #descri{
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    #butts{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 28px;
-        right: 20px;
-        
-    }
-
-    #easy{
-        font-size: 25px;
-        width: 135px;
-        margin-top: 0;
-    }
-
-    #logo{
-        width: 70px;
-        height: 78px;
-    }
-
-    #synonymes{
-        font-size: 24px;
-        margin-left: 10px;
-        width: 170px;
-    }
-
-    #buttact{
-        padding-right: 12px;
-        padding-left: 12px;
-        margin-top: 50px;
-    }
-
-    ::placeholder{
-       color: var(--searchcol);
-    }
-
-    #exemples{
-        flex-direction: column;
-    }
-
-    #exe{
-        margin-left: 38px;
-    }
-
-    #listesyno{
-        margin-left: 90px;
-        font-size: 20px;
-    }
-
-    .definition{
-        font-size: 20px;
-        text-align: left;
+    #biggestbox {
+      padding: 0;
+      margin: 0;
+                                                                
     }
     
-    #buttswitch{
-        margin-right: 0;
-        margin-bottom: 5px;
+    #inbox {
+      width: 375px;
+      padding-left: 18px;
+      padding-top: 15px;
+      box-sizing: border-box;
     }
-
-    .error{
-        margin-left: 20px;
+  
+    #searchbar {
+      width: 300px;
     }
-
-    #audio{
-        margin-left: 230px;
-        margin-top: -55px;
+  
+    #research {
+      width: 230px;
+      margin-left: 0px;
+      padding-left: 20px;
+      margin-top: 50px;
     }
-
-    .definition{
-        text-align: center;
-        margin-right: 50px;
-        margin-top: 20px;
-        margin-left: 20px;
+  
+    #definition {
+      width: 200px;
+      margin: 0;
+      font-size: 24px;
     }
-
-    #searchdef{
-        padding-top: 20px;
+  
+    #searchdefinition {
+      font-size: 20px;
+      text-align: left;
+      margin-left: 40px;
     }
-
-}
-
-
-
+  
+    #searched {
+      font-size: 26px;
+      text-align: center;
+    }
+  
+    #def {
+      margin-top: 57px;
+      margin-left: 26px;
+      display: block;
+    }
+  
+    #descri {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    #butts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 28px;
+      right: 50px;
+    }
+  
+    #easy {
+      font-size: 25px;
+      width: 135px;
+      margin-top: 0;
+    }
+  
+    #logo {
+      width: 70px;
+      height: 78px;
+    }
+  
+    #synonymes {
+      font-size: 24px;
+      margin-left: 10px;
+      width: 170px;
+    }
+  
+    #buttact {
+      padding-right: 12px;
+      padding-left: 12px;
+      margin-top: 50px;
+    }
+  
+    ::placeholder {
+      color: var(--searchcol);
+    }
+  
+    #exemples {
+      flex-direction: column;
+    }
+  
+    #exe {
+      margin-left: 38px;
+    }
+  
+    #listesyno {
+      margin-left: 90px;
+      font-size: 20px;
+    }
+  
+    .definition {
+      font-size: 20px;
+      text-align: left;
+    }
+  
+    #buttswitch {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  
+    .error {
+      margin-left: 20px;
+    }
+  
+    #audio {
+      margin-left: 230px;
+      margin-top: -55px;
+    }
+  
+    .definition {
+      text-align: center;
+      margin-right: 50px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  
+    #searchdef {
+      padding-top: 20px;
+    }
+  }
+  
 
 
 

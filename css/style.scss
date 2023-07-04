@@ -1,0 +1,346 @@
+:root {
+    --primary-color: #fff;
+    --col-text: #454242;
+    --col-textdark: #DDDDDD;
+    --buttcolor: #FF4444;
+    --searchcol: #F0F0F0;
+    font-size: 100%;
+  }
+  
+  body {
+    margin: 0;
+    background-size: auto 100%;
+    font-family: 'Inria Sans', sans-serif;
+  
+    &.darkmode {
+      background-color: #7B7B7B;
+      color: var(--col-textdark);
+    }
+  }
+  
+  #biggestbox {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-left: 113px;
+    padding-top: 55px;
+    box-sizing: border-box;
+  
+    #inbox {
+      width: 1735px;
+    }
+  
+    #logonbutts {
+      display: flex;
+    }
+  
+    #topcont {
+      display: flex;
+    }
+  
+    #easy {
+      font-size: 35px;
+      font-weight: 700;
+      padding-top: 12px;
+      padding-left: 20px;
+    }
+  
+    #butts {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 77px;
+      right: 110px;
+  
+      #buttswitch {
+        border: solid 2px;
+        font-size: 36px;
+        font-family: 'Inria Serif', serif;
+        padding-right: 12px;
+        padding-left: 12px;
+        border-radius: 50px;
+        margin-right: 24px;
+        cursor: pointer;
+        background-color: #a5a5a5;
+      }
+  
+      #buttdark {
+        border: solid 2px;
+        padding: 23px;
+        border-radius: 50px;
+        background-image: url(media/moon.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #a5a5a5;
+        cursor: pointer;
+      }
+    }
+  
+    #searchbar {
+      display: flex;
+  
+      #research {
+        width: 1200px;
+        height: 50px;
+        background-color: var(--searchcol);
+        border-radius: 50px 0px 0px 50px;
+        margin-left: 132px;
+        margin-top: 71px;
+        padding-left: 61px;
+        border: solid 1px;
+      }
+  
+      ::placeholder {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        opacity: 50%;
+      }
+  
+      #buttact {
+        margin-top: 71px;
+        padding: 11px;
+        padding-right: 50px;
+        padding-left: 20px;
+        border: solid 1px;
+        border-radius: 0px 50px 50px 0px;
+        background-color: var(--buttcolor);
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #ff8686;
+          border: solid 1px black;
+        }
+      }
+    }
+  
+    #def {
+      display: flex;
+      justify-content: center;
+      margin-top: 104px;
+  
+      #definition {
+        font-size: 32px;
+        font-weight: 700;
+        margin-right: 24px;
+        margin-top: 0;
+      }
+  
+      #searched {
+        font-size: 34px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 24px;
+        text-transform: uppercase;
+      }
+  
+      #phone {
+        margin-top: 0;
+        text-align: center;
+        margin-right: 20px;
+      }
+  
+      #audio {
+        align-self: center;
+        margin-right: 100px;
+        cursor: pointer;
+      }
+  
+      #searchdefinition {
+        font-size: 22px;
+        text-align: center;
+        margin-right: 100px;
+        margin-top: 22px;
+      }
+  
+      #descri {
+        display: flex;
+        justify-content: center;
+        margin-top: 81px;
+  
+        span {
+          font-weight: 700;
+          font-style: italic;
+        }
+      }
+  
+      #exemples {
+        display: flex;
+  
+        #syno {
+          margin-right: 120px;
+          padding-left: 15px;
+        }
+  
+        #synonymes {
+          font-size: 34px;
+        }
+  
+        #exe {
+          font-size: 34px;
+          margin-left: 130px;
+        }
+  
+        #firstex,
+        #secex {
+          width: 300px;
+          font-size: 22px;
+        }
+  
+        ul {
+          font-size: 22px;
+        }
+  
+        .definition {
+          font-size: 22px;
+          text-align: center;
+          margin-right: 100px;
+        }
+      }
+  
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-left: 150px;
+        margin-top: -10px;
+      }
+  
+      p {
+        margin-top: 0;
+      }
+    }
+  
+    @media screen and (max-width: 375px) {
+      #biggestbox {
+        padding-left: 0px;
+        padding-top: 0px;
+  
+        #inbox {
+          width: 375px;
+          padding-left: 32px;
+          padding-top: 28px;
+        }
+      }
+  
+      #searchbar {
+        width: 375px;
+  
+        #research {
+          width: 245px;
+          margin-left: 12px;
+          padding-left: 20px;
+          margin-top: 50px;
+        }
+  
+        ::placeholder {
+          color: var(--searchcol);
+        }
+      }
+  
+      #definition {
+        width: 200px;
+        margin: 0;
+        font-size: 24px;
+      }
+  
+      #searchdefinition {
+        font-size: 20px;
+        text-align: left;
+        margin-left: 40px;
+      }
+  
+      #searched {
+        font-size: 26px;
+        text-align: center;
+      }
+  
+      #def {
+        margin-top: 57px;
+        margin-left: 26px;
+        display: block;
+      }
+  
+      #descri {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+  
+      #butts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 28px;
+        right: 20px;
+  
+        #easy {
+          font-size: 25px;
+          width: 135px;
+          margin-top: 0;
+        }
+  
+        #logo {
+          width: 70px;
+          height: 78px;
+        }
+  
+        #synonymes {
+          font-size: 24px;
+          margin-left: 10px;
+          width: 170px;
+        }
+  
+        #buttact {
+          padding-right: 12px;
+          padding-left: 12px;
+          margin-top: 50px;
+        }
+      }
+  
+      #exemples {
+        flex-direction: column;
+  
+        #exe {
+          margin-left: 38px;
+        }
+  
+        #listesyno {
+          margin-left: 90px;
+          font-size: 20px;
+        }
+  
+        .definition {
+          font-size: 20px;
+          text-align: left;
+        }
+      }
+  
+      #buttswitch {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+  
+      .error {
+        margin-left: 20px;
+      }
+  
+      #audio {
+        margin-left: 230px;
+        margin-top: -55px;
+      }
+  
+      .definition {
+        text-align: center;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+  
+      #searchdef {
+        padding-top: 20px;
+      }
+    }
+  }
+  

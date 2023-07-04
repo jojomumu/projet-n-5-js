@@ -22,12 +22,14 @@ toggleDark.addEventListener('click', function() {
     toggleDark.style.backgroundColor = 'white';
     fontButton.style.backgroundColor = 'white';
     document.getElementById("errormessage").style.color = 'black';
+    document.getElementById("errormessage").style.fontWeight = 'bold';
   } else {
     logo.src = 'media/logo1.png';
     toggleDark.style.backgroundImage = 'url(media/moon.png)';
     toggleDark.style.backgroundColor = '#a5a5a5';
     fontButton.style.backgroundColor = '#a5a5a5';
     document.getElementById("errormessage").style.color = 'red';
+    document.getElementById("errormessage").style.fontWeight = 'bold';
   }
 });
 
@@ -56,12 +58,14 @@ if (isDarkModePreferred) {
   toggleDark.style.backgroundColor = 'white';
   fontButton.style.backgroundColor = 'white';
   document.getElementById("errormessage").style.color = 'black';
+  document.getElementById("errormessage").style.fontWeight = 'bold';
 } else {
   logo.src = 'media/logo1.png';
   toggleDark.style.backgroundImage = 'url(media/moon.png)';
   toggleDark.style.backgroundColor = '#a5a5a5';
   fontButton.style.backgroundColor = '#a5a5a5';
   document.getElementById("errormessage").style.color = 'red';
+  document.getElementById("errormessage").style.fontWeight = 'bold';
 }
 
 
