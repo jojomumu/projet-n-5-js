@@ -176,10 +176,12 @@ span{
 
 #syno{
     margin-right: 120px;
+    padding-left: 15px;
 }
 
 #synonymes{
     font-size: 34px;
+    
 }
 
 #exe{
@@ -217,19 +219,22 @@ p{
 @media screen and (max-width: 375px) {
 
     #biggestbox{
-        padding-left: 32px;
-        padding-top: 28px;
-        box-sizing: border-box;
+        padding-left: 0px;
+        padding-top: 0px;
     }
 
 
     #inbox{
         width: 375px;
+        /* box-sizing: border-box; */
+        padding-left: 32px;
+        padding-top: 28px;
         
     }
 
     #searchbar{
         width: 375px;
+        
     }
 
     #research{
@@ -242,7 +247,7 @@ p{
 
 
     #definition{
-        width: 170px;
+        width: 200px;
         margin: 0;
         font-size: 24px;
     }
@@ -255,12 +260,13 @@ p{
 
     #searched{
         font-size: 26px;
-
+        text-align: center;
     }
 
     #def{
         margin-top: 57px;
         margin-left: 26px;
+        display: block;
     }
 
     #descri{
@@ -331,6 +337,22 @@ p{
 
     .error{
         margin-left: 20px;
+    }
+
+    #audio{
+        margin-left: 230px;
+        margin-top: -55px;
+    }
+
+    .definition{
+        text-align: center;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    #searchdef{
+        padding-top: 20px;
     }
 
 }

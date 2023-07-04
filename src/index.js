@@ -1,20 +1,21 @@
 const fontButton = document.getElementById('buttswitch');
-
-
-let toggleDark = document.getElementById('buttdark');
-let body = document.body;
-let logo = document.getElementById('logo');
+const toggleDark = document.getElementById('buttdark');
+const body = document.body;
+const logo = document.getElementById('logo');
 let currentFont = 'Inria Sans';
 
 
+const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+
+body.classList.toggle('darkmode', isDarkModePreferred);
 
 toggleDark.addEventListener('click', function() {
-    
-    body.classList.toggle('darkmode');
+  body.classList.toggle('darkmode');
 
-    let isDarkMode = body.classList.contains('darkmode');
   
+  const isDarkMode = body.classList.contains('darkmode');
+
   if (isDarkMode) {
     logo.src = 'media/logo2.png';
     toggleDark.style.backgroundImage = 'url(media/sun.png)';
@@ -28,28 +29,42 @@ toggleDark.addEventListener('click', function() {
     fontButton.style.backgroundColor = '#a5a5a5';
     document.getElementById("errormessage").style.color = 'red';
   }
-  
-  });
-
-
+});
 
 function changeFont() {
-    if (currentFont === 'Inria Sans') {
-      body.style.fontFamily = 'Inria Serif';
-      fontButton.style.fontFamily = 'Roboto Mono';
-      currentFont = 'Inria Serif';
-    } else if (currentFont === 'Inria Serif') {
-      body.style.fontFamily = 'Roboto Mono';
-      fontButton.style.fontFamily = 'Inria Sans';
-      currentFont = 'Roboto Mono';
-    } else {
-      body.style.fontFamily = 'Inria Sans';
-      fontButton.style.fontFamily = 'Inria Serif';
-      currentFont = 'Inria Sans';
-    }
-};
+  if (currentFont === 'Inria Sans') {
+    body.style.fontFamily = 'Inria Serif';
+    fontButton.style.fontFamily = 'Roboto Mono';
+    currentFont = 'Inria Serif';
+  } else if (currentFont === 'Inria Serif') {
+    body.style.fontFamily = 'Roboto Mono';
+    fontButton.style.fontFamily = 'Inria Sans';
+    currentFont = 'Roboto Mono';
+  } else {
+    body.style.fontFamily = 'Inria Sans';
+    fontButton.style.fontFamily = 'Inria Serif';
+    currentFont = 'Inria Sans';
+  }
+}
 
 fontButton.addEventListener('click', changeFont);
+
+
+if (isDarkModePreferred) {
+  logo.src = 'media/logo2.png';
+  toggleDark.style.backgroundImage = 'url(media/sun.png)';
+  toggleDark.style.backgroundColor = 'white';
+  fontButton.style.backgroundColor = 'white';
+  document.getElementById("errormessage").style.color = 'black';
+} else {
+  logo.src = 'media/logo1.png';
+  toggleDark.style.backgroundImage = 'url(media/moon.png)';
+  toggleDark.style.backgroundColor = '#a5a5a5';
+  fontButton.style.backgroundColor = '#a5a5a5';
+  document.getElementById("errormessage").style.color = 'red';
+}
+
+
 
 function updateResearch(value) {
   document.getElementById("searched").textContent = value;
