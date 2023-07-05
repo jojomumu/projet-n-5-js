@@ -209,25 +209,26 @@
     
     #inbox {
       width: 375px;
-      padding-left: 18px;
+      /* padding-left: 18px;
       padding-top: 15px;
-      box-sizing: border-box;
+      box-sizing: border-box; */
     }
   
     #searchbar {
       width: 300px;
+      margin: 0;
     }
   
     #research {
       width: 230px;
-      margin-left: 0px;
+      margin-left: 18px;
       padding-left: 20px;
       margin-top: 50px;
     }
   
     #definition {
       width: 200px;
-      margin: 0;
+      margin-right: 0;
       font-size: 24px;
     }
   
@@ -240,6 +241,12 @@
     #searched {
       font-size: 26px;
       text-align: center;
+      width: 150px;
+    }
+
+    #phone{
+
+      width: 150px;
     }
   
     #def {
@@ -272,6 +279,11 @@
     #logo {
       width: 70px;
       height: 78px;
+    }
+
+    #topcont{
+      margin-top: 20px;
+      margin-left: 18px;
     }
   
     #synonymes {
@@ -318,7 +330,7 @@
     }
   
     #audio {
-      margin-left: 230px;
+      margin-left: 150px;
       margin-top: -55px;
     }
   
@@ -331,6 +343,8 @@
   
     #searchdef {
       padding-top: 20px;
+      width: 325px;
+      margin: 0;
     }
   }
   
