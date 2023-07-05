@@ -19,15 +19,15 @@ toggleDark.addEventListener('click', function() {
   if (isDarkMode) {
     logo.src = 'media/logo2.png';
     toggleDark.style.backgroundImage = 'url(media/sun.png)';
-    toggleDark.style.backgroundColor = 'white';
-    fontButton.style.backgroundColor = 'white';
+    // toggleDark.style.backgroundColor = 'white';
+    // fontButton.style.backgroundColor = 'white';
     document.getElementById("errormessage").style.color = 'black';
     document.getElementById("errormessage").style.fontWeight = 'bold';
   } else {
     logo.src = 'media/logo1.png';
     toggleDark.style.backgroundImage = 'url(media/moon.png)';
-    toggleDark.style.backgroundColor = '#a5a5a5';
-    fontButton.style.backgroundColor = '#a5a5a5';
+    // toggleDark.style.backgroundColor = '#a5a5a5';
+    // fontButton.style.backgroundColor = '#a5a5a5';
     document.getElementById("errormessage").style.color = 'red';
     document.getElementById("errormessage").style.fontWeight = 'bold';
   }
@@ -55,15 +55,15 @@ fontButton.addEventListener('click', changeFont);
 if (isDarkModePreferred) {
   logo.src = 'media/logo2.png';
   toggleDark.style.backgroundImage = 'url(media/sun.png)';
-  toggleDark.style.backgroundColor = 'white';
-  fontButton.style.backgroundColor = 'white';
+  // toggleDark.style.backgroundColor = 'white';
+  // fontButton.style.backgroundColor = 'white';
   document.getElementById("errormessage").style.color = 'black';
   document.getElementById("errormessage").style.fontWeight = 'bold';
 } else {
   logo.src = 'media/logo1.png';
   toggleDark.style.backgroundImage = 'url(media/moon.png)';
-  toggleDark.style.backgroundColor = '#a5a5a5';
-  fontButton.style.backgroundColor = '#a5a5a5';
+  // toggleDark.style.backgroundColor = '#a5a5a5';
+  // fontButton.style.backgroundColor = '#a5a5a5';
   document.getElementById("errormessage").style.color = 'red';
   document.getElementById("errormessage").style.fontWeight = 'bold';
 }
@@ -172,4 +172,13 @@ function search() {
     }
   };
   xhr.send();
+
 };
+
+let searchInput = document.getElementById('research');
+
+searchInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    search();
+  }
+});

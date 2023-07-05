@@ -42,7 +42,7 @@
   #easy {
     font-size: 35px;
     font-weight: 700;
-    padding-top: 12px;
+    padding-top: 5px;
     padding-left: 20px;
   }
   
@@ -63,7 +63,6 @@
     border-radius: 50px;
     margin-right: 24px;
     cursor: pointer;
-    background-color: #a5a5a5;
   }
   
   #buttdark {
@@ -74,8 +73,11 @@
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #a5a5a5;
     cursor: pointer;
+  }
+
+  #buttswitch:hover, #buttdark:hover{
+    border: solid 2px red;
   }
   
   #searchbar {
@@ -83,14 +85,14 @@
   }
   
   #research {
-    width: 1200px;
+    width: 1000px;
     height: 50px;
     background-color: var(--searchcol);
     border-radius: 50px 0px 0px 50px;
-    margin-left: 132px;
+    margin-left: 232px;
     margin-top: 71px;
     padding-left: 61px;
-    border: solid 1px;
+    border: none;
     font-size: 20px;
   }
   
@@ -101,11 +103,11 @@
   }
   
   #buttact {
-    margin-top: 71px;
-    padding: 11px;
-    padding-right: 50px;
+    margin-top: 70px;
+    padding: 12px;
+    padding-right: 40px;
     padding-left: 20px;
-    border: solid 1px;
+    border: none;
     border-radius: 0px 50px 50px 0px;
     background-color: var(--buttcolor);
     cursor: pointer;
@@ -118,8 +120,9 @@
   
   #def {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-top: 104px;
+    margin-left: 250px;
   }
   
   #definition {
@@ -127,6 +130,13 @@
     font-weight: 700;
     margin-right: 24px;
     margin-top: 0;
+    text-align: left;
+  }
+
+  #searchdef{
+    width: 1200px;
+    margin-left: 230px;
+
   }
   
   #searched {
@@ -147,19 +157,22 @@
   #audio {
     align-self: center;
     margin-right: 100px;
+    padding-bottom: 13px;
     cursor: pointer;
+    
   }
   
   #searchdefinition {
     font-size: 22px;
-    text-align: center;
     margin-right: 100px;
+    margin-left: 45px;
     margin-top: 22px;
   }
   
   #descri {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 250px;
     margin-top: 81px;
   }
   
@@ -183,14 +196,14 @@
   
   .definition {
     font-size: 22px;
-    text-align: center;
+    margin-left: 45px;
     margin-right: 100px;
   }
   
   .error {
     color: red;
     font-size: 14px;
-    margin-left: 150px;
+    margin-left: 250px;
     margin-top: -10px;
   }
   
@@ -209,9 +222,6 @@
     
     #inbox {
       width: 375px;
-      /* padding-left: 18px;
-      padding-top: 15px;
-      box-sizing: border-box; */
     }
   
     #searchbar {
@@ -233,20 +243,21 @@
     }
   
     #searchdefinition {
-      font-size: 20px;
-      text-align: left;
-      margin-left: 40px;
+      font-size: 17px;
+      text-align: center;
+      margin-left: 60px;
+      margin-right: 80px;
     }
   
     #searched {
       font-size: 26px;
       text-align: center;
-      width: 150px;
+      width: 200px;
     }
 
     #phone{
 
-      width: 150px;
+      width: 200px;
     }
   
     #def {
@@ -259,6 +270,7 @@
       display: flex;
       flex-direction: column;
       margin-top: 10px;
+      margin-left: 0;
     }
   
     #butts {
@@ -266,8 +278,8 @@
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top: 28px;
-      right: 50px;
+      top: 20px;
+      right: 40px;
     }
   
     #easy {
@@ -290,6 +302,7 @@
       font-size: 24px;
       margin-left: 10px;
       width: 170px;
+
     }
   
     #buttact {
@@ -302,17 +315,9 @@
       color: var(--searchcol);
     }
   
-    #exemples {
-      flex-direction: column;
-    }
-  
-    #exe {
-      margin-left: 38px;
-    }
-  
     #listesyno {
       margin-left: 90px;
-      font-size: 20px;
+      font-size: 17px;
     }
   
     .definition {
@@ -330,12 +335,13 @@
     }
   
     #audio {
-      margin-left: 150px;
+      margin-left: 0px;
       margin-top: -55px;
     }
   
     .definition {
       text-align: center;
+      font-size: 17px;
       margin-right: 50px;
       margin-top: 20px;
       margin-left: 20px;
@@ -343,8 +349,12 @@
   
     #searchdef {
       padding-top: 20px;
-      width: 325px;
+      width: 375px;
       margin: 0;
+    }
+
+    ul{
+      font-size: 17px;
     }
   }
   
