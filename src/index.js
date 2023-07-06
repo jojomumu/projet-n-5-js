@@ -143,7 +143,7 @@ function search() {
 
           let audioUrl = phonetics[0].audio;
           let audioImage = document.createElement("img");
-          audioImage.src = "media/audio.png";
+          audioImage.src = "media/audio2.png";
           audioImage.alt = "Audio";
           audioImage.width = 25;
           audioImage.height = 25;
@@ -171,3 +171,4 @@ searchInput.addEventListener('keypress', function(event) {
     search();
   }
 });
+
