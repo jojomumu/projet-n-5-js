@@ -4,32 +4,27 @@ const body = document.body;
 const logo = document.getElementById('logo');
 let currentFont = 'Inria Sans';
 
-
 const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
 
 body.classList.toggle('darkmode', isDarkModePreferred);
 
 toggleDark.addEventListener('click', function() {
   body.classList.toggle('darkmode');
 
-  
   const isDarkMode = body.classList.contains('darkmode');
 
   if (isDarkMode) {
     logo.src = 'media/logo2.png';
     toggleDark.style.backgroundImage = 'url(media/sun.png)';
-    // toggleDark.style.backgroundColor = 'white';
-    // fontButton.style.backgroundColor = 'white';
-    document.getElementById("errormessage").style.color = 'black';
-    document.getElementById("errormessage").style.fontWeight = 'bold';
+    document.getElementById('errormessage').style.color = 'black';
+    document.getElementById('errormessage').style.fontWeight = 'bold';
+    document.getElementById('loupe').src = 'media/loupe2.png';
   } else {
     logo.src = 'media/logo1.png';
     toggleDark.style.backgroundImage = 'url(media/moon.png)';
-    // toggleDark.style.backgroundColor = '#a5a5a5';
-    // fontButton.style.backgroundColor = '#a5a5a5';
-    document.getElementById("errormessage").style.color = 'red';
-    document.getElementById("errormessage").style.fontWeight = 'bold';
+    document.getElementById('errormessage').style.color = 'red';
+    document.getElementById('errormessage').style.fontWeight = 'bold';
+    document.getElementById('loupe').src = 'media/loupe.png';
   }
 });
 
@@ -51,23 +46,19 @@ function changeFont() {
 
 fontButton.addEventListener('click', changeFont);
 
-
 if (isDarkModePreferred) {
   logo.src = 'media/logo2.png';
   toggleDark.style.backgroundImage = 'url(media/sun.png)';
-  // toggleDark.style.backgroundColor = 'white';
-  // fontButton.style.backgroundColor = 'white';
-  document.getElementById("errormessage").style.color = 'black';
-  document.getElementById("errormessage").style.fontWeight = 'bold';
+  document.getElementById('errormessage').style.color = 'black';
+  document.getElementById('errormessage').style.fontWeight = 'bold';
+  document.getElementById('loupe').src = 'media/loupe2.png';
 } else {
   logo.src = 'media/logo1.png';
   toggleDark.style.backgroundImage = 'url(media/moon.png)';
-  // toggleDark.style.backgroundColor = '#a5a5a5';
-  // fontButton.style.backgroundColor = '#a5a5a5';
-  document.getElementById("errormessage").style.color = 'red';
-  document.getElementById("errormessage").style.fontWeight = 'bold';
+  document.getElementById('errormessage').style.color = 'red';
+  document.getElementById('errormessage').style.fontWeight = 'bold';
+  document.getElementById('loupe').src = 'media/loupe.png';
 }
-
 
 
 function updateResearch(value) {
@@ -121,7 +112,6 @@ function search() {
           definitionsDiv.appendChild(definitionElement);
         }
 
-        
         let synonyms = [];
         for (let i = 0; i < meanings.length; i++) {
           let synonymsData = meanings[i].definitions[0].synonyms;
@@ -129,26 +119,25 @@ function search() {
             synonyms.push(...synonymsData);
           }
         }
+        
         if (synonyms.length > 0) {
-          let synonymsElement = document.createElement("ul");
-          for (let i = 0; i < synonyms.length; i++) {
-            let synonym = document.createElement("li");
-            synonym.textContent = synonyms[i];
-            synonymsElement.appendChild(synonym);
-          }
+          let synonymsElement = document.createElement("div");
+          let synonymsText = synonyms.join(", ");
+          let synonymParagraph = document.createElement("p");
+          synonymParagraph.textContent = synonymsText;
+          synonymsElement.appendChild(synonymParagraph);
           synonymesDiv.appendChild(synonymsElement);
-
+        
           document.getElementById("descri").style.display = "flex";
         } else {
-          
           document.getElementById("descri").style.display = "none";
-        
         }
+        
 
         
         let phonetics = wordData.phonetics;
         if (phonetics && phonetics.length > 0) {
-          let phoneticsElement = document.createElement("p");
+          let phoneticsElement = document.createElement("p.phonet");
           phoneticsElement.textContent = phonetics[0].text;
           phoneticsWord.appendChild(phoneticsElement);
 

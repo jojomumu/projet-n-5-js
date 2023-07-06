@@ -22,8 +22,8 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding-left: 113px;
-    padding-top: 55px;
+    padding-left: 7.0625rem;
+    padding-top: 3.4375rem;
     box-sizing: border-box;
   }
   
@@ -40,10 +40,10 @@
   }
   
   #easy {
-    font-size: 35px;
+    font-size: 2.1875rem;
     font-weight: 700;
-    padding-top: 5px;
-    padding-left: 20px;
+    padding-top: 0.3125rem;
+    padding-left: 1.25rem;
   }
   
   #butts {
@@ -56,23 +56,25 @@
   
   #buttswitch {
     border: solid 2px;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: 'Inria Serif', serif;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
     border-radius: 50px;
-    margin-right: 24px;
+    margin-right: 1.5rem;
+    /* background-color: var(--buttcolor); */
     cursor: pointer;
   }
   
   #buttdark {
     border: solid 2px;
-    padding: 23px;
+    padding: 1.4375rem;
     border-radius: 50px;
     background-image: url(media/moon.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
+    /* background-color: var(--buttcolor); */
     cursor: pointer;
   }
 
@@ -89,9 +91,9 @@
     height: 50px;
     background-color: var(--searchcol);
     border-radius: 50px 0px 0px 50px;
-    margin-left: 232px;
-    margin-top: 71px;
-    padding-left: 61px;
+    margin-left: 14.5rem;
+    margin-top: 4.4375rem;
+    padding-left: 3.8125rem;
     border: none;
     font-size: 20px;
   }
@@ -103,10 +105,11 @@
   }
   
   #buttact {
-    margin-top: 70px;
-    padding: 12px;
-    padding-right: 40px;
-    padding-left: 20px;
+    margin-top: 4.375rem;
+    margin-left: 0;
+    padding: 9px;
+    padding-right: 2.5rem;
+    padding-left: 1.25rem;
     border: none;
     border-radius: 0px 50px 50px 0px;
     background-color: var(--buttcolor);
@@ -115,65 +118,66 @@
   
   #buttact:hover {
     background-color: #ff8686;
-    border: solid 1px black;
+    
   }
   
   #def {
     display: flex;
     justify-content: start;
-    margin-top: 104px;
-    margin-left: 250px;
+    margin-top: 6.5rem;
+    margin-left: 15.625rem;
   }
   
   #definition {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-right: 24px;
+    margin-right: 1.5rem;
     margin-top: 0;
     text-align: left;
   }
 
   #searchdef{
     width: 1200px;
-    margin-left: 230px;
+    margin-left: 14.375rem;
 
   }
   
   #searched {
-    font-size: 34px;
+    font-size: 2.125rem;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 24px;
+    margin-right: 1.5rem;
     text-transform: uppercase;
   }
   
   #phone {
     margin-top: 0;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 1.5625rem;
   }
   
   #audio {
     align-self: center;
-    margin-right: 100px;
-    padding-bottom: 13px;
+    margin-right: 6.25rem;
+    margin-left: 0;
+    margin-bottom: 2.25rem;
     cursor: pointer;
     
   }
   
   #searchdefinition {
-    font-size: 22px;
-    margin-right: 100px;
-    margin-left: 45px;
-    margin-top: 22px;
+    font-size: 1.375rem;
+    margin-right: 6.25rem;
+    margin-left: 2.8125rem;
+    margin-top: 1.375rem;
   }
   
   #descri {
     display: flex;
     justify-content: start;
-    margin-left: 250px;
-    margin-top: 81px;
+    margin-left: 14.6875rem;
+    margin-top: 5.0625rem;
   }
   
   span {
@@ -182,34 +186,37 @@
   }
   
   #syno {
-    margin-right: 120px;
-    padding-left: 15px;
+    margin-right: 7.5rem;
+    padding-left: 0.9375rem;
   }
   
   #synonymes {
-    font-size: 34px;
-  }
-  
-  ul {
-    font-size: 22px;
+    font-size: 2.125rem;
   }
   
   .definition {
-    font-size: 22px;
-    margin-left: 45px;
-    margin-right: 100px;
+    font-size: 1.375rem;
+    margin-left: 2.8125rem;
+    margin-right: 6.25rem;
   }
   
   .error {
     color: red;
     font-size: 14px;
-    margin-left: 250px;
-    margin-top: -10px;
+    margin-left: 15.625rem;
+    margin-top: -0.625rem;
   }
   
   p {
     margin-top: 0;
+    margin-left: 1.75rem;
+    font-size: 1.375rem;
   }
+
+  #loupe{
+    margin-top: 0.25rem;
+  }
+
   
   @media screen and (max-width: 375px) {
 
@@ -231,26 +238,25 @@
   
     #research {
       width: 230px;
-      margin-left: 18px;
-      padding-left: 20px;
-      margin-top: 50px;
+      margin-left: 1.5625rem;
+      padding-left: 1.25rem;
+      margin-top: 3.125rem;
     }
   
     #definition {
       width: 200px;
       margin-right: 0;
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   
     #searchdefinition {
-      font-size: 17px;
-      text-align: center;
-      margin-left: 60px;
-      margin-right: 80px;
+      font-size: 1.0625rem;
+      margin-left: 3.75rem;
+      margin-right: 5rem;
     }
   
     #searched {
-      font-size: 26px;
+      font-size: 1.625rem;
       text-align: center;
       width: 200px;
     }
@@ -261,15 +267,15 @@
     }
   
     #def {
-      margin-top: 57px;
-      margin-left: 26px;
+      margin-top: 3.5625rem;
+      margin-left: 1.625rem;
       display: block;
     }
   
     #descri {
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      margin-top: 0.625rem;
       margin-left: 0;
     }
   
@@ -278,12 +284,12 @@
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top: 20px;
-      right: 40px;
+      top: 1.25rem;
+      right: 2.5rem;
     }
   
     #easy {
-      font-size: 25px;
+      font-size: 1.5625rem;
       width: 135px;
       margin-top: 0;
     }
@@ -294,21 +300,22 @@
     }
 
     #topcont{
-      margin-top: 20px;
-      margin-left: 18px;
+      margin-top: 1.25rem;
+      margin-left: 1.125rem;
     }
   
     #synonymes {
-      font-size: 24px;
-      margin-left: 10px;
+      font-size: 1.5rem;
+      margin-left: 0.625rem;
       width: 170px;
 
     }
   
     #buttact {
-      padding-right: 12px;
-      padding-left: 12px;
-      margin-top: 50px;
+      padding-right: 1.125rem;
+      padding-left: 0.75rem;
+      margin-top: 3.125rem;
+      margin-left: 0;
     }
   
     ::placeholder {
@@ -316,45 +323,48 @@
     }
   
     #listesyno {
-      margin-left: 90px;
-      font-size: 17px;
+      margin-left: 1.25rem;
+      font-size: 1.0625rem;
     }
   
     .definition {
-      font-size: 20px;
+      font-size: 1.25rem;
       text-align: left;
     }
   
     #buttswitch {
       margin-right: 0;
-      margin-bottom: 5px;
+      margin-bottom: 0.3125rem;
     }
   
     .error {
-      margin-left: 20px;
+      margin-left: 1.25rem;
     }
   
     #audio {
       margin-left: 0px;
-      margin-top: -55px;
+      margin-top: -3.4375rem;
     }
   
     .definition {
-      text-align: center;
-      font-size: 17px;
-      margin-right: 50px;
-      margin-top: 20px;
-      margin-left: 20px;
+      font-size: 1.0625rem;
+      margin-right: 3.125rem;
+      margin-top: 1.25rem;
+      margin-left: 1.25rem;
     }
   
     #searchdef {
-      padding-top: 20px;
+      padding-top: 1.25rem;
       width: 375px;
       margin: 0;
     }
 
-    ul{
-      font-size: 17px;
+    p{
+      font-size: 1.0625rem;
+    }
+
+    #loupe{
+      margin-top: 0;
     }
   }
   
