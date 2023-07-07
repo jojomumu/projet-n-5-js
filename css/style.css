@@ -243,7 +243,7 @@
   
     #research {
       width: 130px;
-      margin-left: 40px;
+      margin-left: 2.5rem;
       padding-left: 1.25rem;
       margin-top: 3.125rem;
     }
@@ -256,8 +256,8 @@
   
     #searchdefinition {
       font-size: 0.875rem;
-      margin-left: 50px;
-      margin-right: 110px;
+      margin-left: 3.125rem;
+      margin-right: 6.875rem;
       margin-top: 6.25rem;
     }
   
@@ -305,7 +305,7 @@
 
     #topcont{
       margin-top: 1.25rem;
-      margin-left: 38px;
+      margin-left: 2.375rem;
     }
   
     #synonymes {
@@ -316,10 +316,10 @@
     }
   
     #buttact {
-      padding-right: 18px;
-      padding-left: 12px;
-      padding-top: 16px;
-      margin-top: 49px;
+      padding-right: 1.125rem;
+      padding-left: 0.75rem;
+      padding-top: 1rem;
+      margin-top: 3.0625rem;
       margin-left: 0;
     }
   
@@ -333,12 +333,12 @@
     }
   
     .definition {
-      font-size: 14px;
+      font-size: 0.875rem;
       text-align: left;
     }
   
     #buttswitch {
-      margin-right: 15px;
+      margin-right: 0.9375rem;
       margin-bottom: 0.3125rem;
     }
   
@@ -347,12 +347,12 @@
     }
   
     #audio {
-      margin-left: 130px;
+      margin-left: 8.125rem;
       margin-top: -117px;
     }
   
     .definition {
-      margin-right: 100px;
+      margin-right: 6.25rem;
       margin-top: 1.25rem;
       margin-left: 1.25rem;
     }
@@ -364,7 +364,7 @@
     }
 
     p{
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     #loupe{
@@ -374,7 +374,7 @@
     #logo{
       width: 59px;
       height: 70px;
-      margin-top: 5px;
+      margin-top: 0.3125rem;
     }
   }
 
@@ -473,10 +473,10 @@
     }
   
     #buttact {
-      padding-right: 18px;
-      padding-left: 12px;
-      padding-top: 16px;
-      margin-top: 49px;
+      padding-right: 1.125rem;
+      padding-left: 0.75rem;
+      padding-top: 1rem;
+      margin-top: 3.0625rem;
       margin-left: 0;
     }
   
@@ -495,7 +495,7 @@
     }
   
     #buttswitch {
-      margin-right: 15px;
+      margin-right: 0.9375rem;
       margin-bottom: 0.3125rem;
     }
   
@@ -504,8 +504,8 @@
     }
   
     #audio {
-      margin-left: 130px;
-      margin-top: -117px;
+      margin-left: 8.125rem;
+      margin-top: -7.3125rem;
     }
   
     .definition {
@@ -548,7 +548,7 @@
   
     #research {
       width: 430px;
-      margin-left: 150px;
+      margin-left: 9.375rem;
       padding-left: 1.25rem;
       margin-top: 3.125rem;
     }
@@ -561,7 +561,7 @@
   
     #searchdefinition {
       font-size: 1.0625rem;
-      margin-left: 120px;
+      margin-left: 7.5rem;
       margin-right: 5rem;
       margin-top: 6.25rem;
     }
@@ -579,7 +579,7 @@
   
     #def {
       margin-top: 3.5625rem;
-      margin-left: 100px;
+      margin-left: 6.25rem;
       display: block;
     }
   
@@ -600,27 +600,27 @@
 
     #topcont{
       margin-top: 1.25rem;
-      margin-left: 38px;
+      margin-left: 2.375rem;
     }
   
     #synonymes {
       font-size: 1.5rem;
-      margin-left: 80px;
+      margin-left: 5rem;
       width: 170px;
 
     }
   
     #buttact {
-      padding-right: 22px;
-      padding-left: 12px;
-      padding-top: 16px;
-      margin-top: 49px;
+      padding-right: 1.375rem;
+      padding-left: 0.75rem;
+      padding-top: 1rem;
+      margin-top: 3.0625rem;
       margin-left: 0;
     }
   
   
     #listesyno {
-      margin-left: 80px;
+      margin-left: 5rem;
       font-size: 1.0625rem;
     }
   
@@ -630,7 +630,7 @@
     }
   
     #buttswitch {
-      margin-right: 15px;
+      margin-right: 0.9375rem;
       margin-bottom: 0.3125rem;
     }
   
@@ -639,15 +639,15 @@
     }
   
     #audio {
-      margin-left: 130px;
-      margin-top: -117px;
+      margin-left: 8.125rem;
+      margin-top: -7.3125rem;
     }
   
     .definition {
       font-size: 1.0625rem;
       margin-right: 3.125rem;
       margin-top: 1.25rem;
-      margin-left: 125px;
+      margin-left: 7.8125rem;
     }
   
     #searchdef {
@@ -682,7 +682,7 @@
   
     #research {
       width: 630px;
-      margin-left: 300px;
+      margin-left: 18.75rem;
       padding-left: 1.25rem;
       margin-top: 3.125rem;
     }
@@ -695,7 +695,7 @@
   
     #searchdefinition {
       font-size: 1.0625rem;
-      margin-left: 320px;
+      margin-left: 20rem;
       margin-top: 6.25rem;
     }
   
@@ -712,7 +712,7 @@
   
     #def {
       margin-top: 3.5625rem;
-      margin-left: 300px;
+      margin-left: 18.75rem;
       display: block;
     }
   
@@ -733,32 +733,32 @@
 
     #topcont{
       margin-top: 1.25rem;
-      margin-left: 38px;
+      margin-left: 2.375rem;
     }
   
     #synonymes {
       font-size: 1.5rem;
-      margin-left: 80px;
+      margin-left: 5rem;
       width: 170px;
 
     }
   
     #buttact {
-      padding-right: 22px;
-      padding-left: 12px;
-      padding-top: 16px;
-      margin-top: 49px;
+      padding-right: 1.375rem;
+      padding-left: 0.75rem;
+      padding-top: 1rem;
+      margin-top: 3.0625rem;
       margin-left: 0;
     }
   
   
     #listesyno {
-      margin-left: 80px;
+      margin-left: 5rem;
       font-size: 1.0625rem;
     }
 
     #syno{
-      margin-left: 210px;
+      margin-left: 13.125rem;
     }
   
     .definition {
@@ -767,24 +767,24 @@
     }
   
     #buttswitch {
-      margin-right: 15px;
+      margin-right: 0.9375rem;
       margin-bottom: 0.3125rem;
     }
   
     .error {
-      margin-left: 300px;
+      margin-left: 18.75rem;
     }
   
     #audio {
-      margin-left: 130px;
-      margin-top: -117px;
+      margin-left: 8.125rem;
+      margin-top: -7.3125rem;
     }
   
     .definition {
       font-size: 1.0625rem;
       margin-right: 3.125rem;
       margin-top: 1.25rem;
-      margin-left: 350px;
+      margin-left: 21.875rem;
     }
   
     #searchdef {
